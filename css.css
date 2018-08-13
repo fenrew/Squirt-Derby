@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#loading-screen {
+    position: absolute;
+    width: 1500px;
+    height: 800px;
+    transition: opacity 2s ease-out;
+}
+
+#gamebox {
+    width: 1500px;
+    height: 800px;
+    margin: 60px auto 0 auto;
+    border: 20px solid black;
+}
+
+#gamepad {
+    display: block;
+    float: right;
+    background-color: red;
+    width: 400px;
+    height: 800px;
+}
+
+#gamearea {
+    width: 1100px;
+    height: 800px;
+    background-color: black;
+}
+
+#option {
+    display: block;
+    text-align: center;
+    line-height: 130px;
+    position: relative;
+    top: 120px;
+    opacity: 0;
+    transition: opacity 2s ease-in;
+}
+
+h1 {
+    color: white;
+    font-size: 100px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: white;
+    font-size: 60px;
+    border: 5px solid black;
+}
+
+h2:hover {
+    border: 5px solid red;
+    color: red;
+    margin-right: 20px;
+    font-size: 75px;
+    border-radius: 1%;
+    cursor: pointer;
+}      
+
+.gamearea-img {
+    background-image: url("./img/Map1-finished.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+.football-img {
+    position: absolute;
+    top: 130px;
+}
+
+#playerOne {
+    position: relative;
+    height: 190px;
+   /* width: 100px; */
+}
+
+#countdown {
+    font-size: 200px;
+    position: fixed;
+    top: 350px;
+    left: 700px;
+    color: rgb(243, 228, 25);
+    background-color: rgba(187, 0, 0, 0.801);
+    padding: 30px 40px 0 40px;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+
+h4 {
+    height: 300px;
+    font-size: 150px;
+    text-align: center;
+    width: 1000px;
+    position: fixed;
+    top: 320px;
+    color: rgb(0, 0, 0);
+    border: 10px dotted rgb(255, 208, 0);
+    left: 110px;
+    background-color: rgba(255, 254, 254, 0.746);
+}
+
+.talking-bubble:hover {
+    border: 3px solid red;
+    cursor: pointer;
+}
+
+h4:hover {
+    border: 10px solid red;
+    cursor: pointer;
+}
+
+/* SHOP: HERE: PUT THE SIMS LOBBY MUSIC!!!! */
+
+#shop-layout {
+    background-image: url("./img/reception.jpg");
+    background-size: 1100px 800px;
+    height: 800px;
+    opacity: 0;
+    position: relative;
+    transition: opacity 2s ease-in;
+}
+
+.talking-bubble {
+    background-color: white;
+    border-radius: 20%;
+    display: flex;
+    padding: 15px 10px 15px 20px;
+    font-size: 30px;
+    margin: 0px 30px 0px 700px;
+    border: 3px solid white;
+}
+
+#race-btn {
+    background-image: url("./img/Race-img.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    height: 100px;
+    width: 200px;
+    top: 100px;
+    left: 30px;
+    border: 4px solid transparent;
+}
+
+#back-alley-btn {
+    background-image: url("./img/Casino.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 175px;
+    border-radius: 20%;
+    position: absolute;
+    left: 910px;
+    top: 610px;
+}
+
+#upgrade-btn {
+    background-image: url("./img/upgrade-img2.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 100%;
+    height: 130px;
+    width: 130px;
+    position: absolute;
+    left: 931px;
+    top: 450px; 
+}
+
+#back-alley-btn:hover {
+    border: 4px solid red;
+    left: 906px;
+    top: 606px;
+    cursor: pointer;
+}
+
+#upgrade-btn:hover {
+    border: 4px solid red;
+    cursor: pointer;
+    left: 927px;
+    top: 446px;
+}
+
+
+#race-btn:hover {
+    border: 4px solid red;
+    cursor: pointer;
+    border-radius: 12%;
+}
+
+/* Upgrade room*/
+
+#upgrade-room {
+    background-image: url("./img/Upgrade-room.jpg");
+    background-size: 1100px 800px;
+    height: 800px;
+    position: relative;
+}
+
+#upgrade-speed {
+    background-image: url("./img/153410075599597954.png");
+    background-size: 100% 100%;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: 230px;
+    top: 160px;
+}
+
+#upgrade-intelligence {
+    background-image: url("./img/Intelligence-upgrade.png");
+    background-size: 100% 100%;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 520px;
+    top: 190px;
+}
+
+#upgrade-speed:hover {
+    height: 190px;
+    width: 220px;
+    left: 195px;
+    top: 125px;
+}
+
+#upgrade-intelligence:hover {
+    height: 120px;
+    width: 150px;
+    left: 500px;
+    top: 170px; 
+}
+
+h5 {
+    line-height: 640px;
+    font-size: 30px;
+    word-spacing: 160px;
+    margin-left: 260px;
+    color: green;
+    text-shadow: 1.5px 1.5px black;
+}
+
+/* Back alley */
+
+#back-alley {
+    background-image: url("./img/Back-alley.jpg");
+    background-size: 1100px 800px;
+    height: 800px;
+}
+
+
+/* ICONS */
+
+.lightning-icon {
+    background-image: url("./img/lightning-icon.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+}
+
+.poop-icon {
+    background-image: url("./img/poop-icon.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+}
