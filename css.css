@@ -17,13 +17,51 @@
     border: 20px solid black;
 }
 
+
+/* Gamepad */
+
 #gamepad {
     display: block;
     float: right;
     background-color: red;
     width: 400px;
     height: 800px;
+
 }
+
+#player-one-gamepad {
+    background-color: rgb(228, 228, 0);
+    width: 400px;
+    height: 200px;
+}
+
+#player-two-gamepad {
+    background-color: rgb(197, 197, 0);
+    width: 400px;
+    height: 200px;
+}
+
+#player-three-gamepad {
+    background-color: rgb(153, 153, 0);
+    width: 400px;
+    height: 200px;
+}
+
+#player-four-gamepad {
+    background-color: rgb(100, 100, 0);
+    width: 400px;
+    height: 200px;
+}
+
+h3 {
+    font-size: 40px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding-top: 10px;
+}
+
+
+/* Game area */
 
 #gamearea {
     width: 1100px;
@@ -71,7 +109,7 @@ h2:hover {
 
 .football-img {
     position: absolute;
-    top: 130px;
+    top: 210px;
 }
 
 #playerOne {
@@ -245,12 +283,72 @@ h5 {
     text-shadow: 1.5px 1.5px black;
 }
 
+#exit-upgrade {
+    background-image: url("./img/Exit-sign.png");
+    background-size: 100% 100%;
+    height: 100px;
+    width: 200px;
+    background-repeat: no-repeat;
+    position: absolute; 
+    top: 550px;
+    left: 780px;
+    border-radius: 10%;
+}
+
+#exit-upgrade:hover {
+    height: 150px;
+    width: 300px;
+    top: 525px;
+    left: 755px;
+}
+
+
 /* Back alley */
 
 #back-alley {
     background-image: url("./img/Back-alley.jpg");
     background-size: 1100px 800px;
+    position: relative;
     height: 800px;
+}
+
+#talking-bubble-alley {
+    background-color: white;
+    border-radius: 20%;
+    display: flex;
+    padding: 15px 10px 15px 20px;
+    font-size: 30px;
+    margin: 0px 30px 0px 700px;
+    border: 3px solid white;
+}
+
+#shady-guy {
+    background-image: url("./img/Shady-person.png");
+    background-size: 100% 100%;
+    height: 500px;
+    width: 500px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 300px;
+}
+
+#exit-alley {
+    background-image: url("./img/Exit-sign.png");
+    background-size: 100% 100%;
+    height: 100px;
+    width: 200px;
+    background-repeat: no-repeat;
+    position: absolute; 
+    top: 350px;
+    left: 780px;
+    border-radius: 10%;
+}
+
+#exit-alley:hover {
+    height: 150px;
+    width: 300px;
+    top: 325px;
+    left: 755px;
 }
 
 
@@ -263,6 +361,7 @@ h5 {
     height: 50px;
     width: 50px;
     position: absolute;
+    top: 220px;
 }
 
 .poop-icon {
@@ -272,4 +371,5 @@ h5 {
     height: 50px;
     width: 50px;
     position: absolute;
+    top: 222px;
 }

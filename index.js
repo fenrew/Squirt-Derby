@@ -4,15 +4,15 @@ var player1;
 var player2;
 var player3;
 var player4;
+var framerates = 0;
 
 //Initiation
 $("#option").hide();
 $("#shop-layout").hide();
 $("#upgrade-room").hide();
 $("#back-alley").hide();
+setUpOption();
 // $("#loading-screen").hide(Image);
-
-
 
 
 //Set-up
@@ -33,8 +33,6 @@ function setUpOption () {
         option = false;
       });
 }
-
-setUpOption();
 
 
 //The Shop
@@ -58,22 +56,38 @@ function shopDisplay() {
       upgradeRunner();
     });
 
-    $("back-alley-btn").click(function() {
+    $("#back-alley-btn").click(function() {
       backAlley();
     })
 
-}
+};
 
 function upgradeRunner(){
   $("#shop-layout").hide();
   $("#upgrade-room").show();
-
-}
+  $("#exit-upgrade").click(function(){
+    $("#upgrade-room").hide();
+    $("#shop-layout").show();
+  })
+};
 
 function backAlley() {
   $("#shop-layout").hide();
   $("#back-alley").show();
-}
+  $("#exit-alley").click(function(){
+    $("#back-alley").hide();
+    $("#shop-layout").show();
+  })
+  $("#talking-bubble-alley").text("Welcome to the dark alley! This is the place you can illigally bet on other players to win. You'll recive 2x your bet if you bet correctly! But be careful, the police might be right around the corner")
+  $("#talking-bubble-alley").click(function(){
+    $("#talking-bubble-alley").text("Want to bet already?? You better make it a fat bet aswell... Like your mom")
+    $("#talking-bubble-alley").click(function(){
+      $("#talking-bubble-alley").text("Comon man, don't be like that... Just place your bet and be gone, like all women around you...");
+      $("#talking-bubble-alley").click(function(){
+        $("#talking-bubble-alley").hide();
+    })})});
+  
+};
 
 
 //The Run Display
@@ -87,8 +101,6 @@ function displayVisuals(param){
 }
 
 function playersSetUp() {
-  player1 = new Runner("Football", 1000, 4, "playerOne");
-  player1.runnerImage();
   //Add for more players!
   countdownToStart();
 }
@@ -108,72 +120,30 @@ function countdownToStart() {
       if (countdownCounter === -3) {
         $("#countdown").remove();
         clearInterval(intervalCountdown);
-        theRun(true);
+        theRun();
+        return false;
       }
     }, 1000);
 } 
 
 
 //The Run
-
 function theRun() {
-  (player1)
-  var state = true;
-  if (state === true) {
-    runnerMovement(player1);
-    var eventInterval = setInterval(function() {
-      runEventPowerUps(player1, player1.intelligence);
-    }, 600)
-  } else if (state === false) {
-    clearInterval(eventInterval);
-    return;
-  }
-}
-
-function runnerMovement(player) {
-  var movementInterval = setInterval(function() {
-   var array = player.runningArray;
-    movement(array);
-    var lengthMovement = array.length * 30 + "px";
-    player.imgReference.css("left", lengthMovement);
-    if (array.length === 5) {
-      clearInterval(movementInterval);
-      theRunFinished(player.name);
-      return;
-    }
-  }, player.speed);
-};
-
-function movement(moveArray) {
-    return moveArray.unshift(0)
+  var game = new Game();
+  var playerOne = new Runner("Football", game, 130, 4, playerOne);
+  game.addPlayer(playerOne);
+  playerOne.runnerImage();
+  game.start();
+  playerOne.eventGenerator(playerOne.intelligence);
 }
 
 function theRunFinished(name){
-  $("#upcoming-winner-of-race").append("<h4>Congratulation " + name + "!!<h4>");
-  clearInterval(eventInterval);
-}
+  $("#upcoming-winner-of-race").append("<h4 class='winner-of-race'>Congratulation " + name + "!!<h4>");
+  $("#upcoming-winner-of-race").click(function() {
+    $("#upcoming-winner-of-race").hide();
+    gamearea.removeClass("gamearea-img");
+    //$("#upcoming-winner-of-race").empty();
+    shopDisplay();
+  });
+};
 
-// the Run Events
-
-function runEventPowerUps(player, intelligence) {
-  for (var i = 0; i < intelligence; i++) {
-    var events = ["lightning-icon", "poop-icon"]
-    var randomNumber = Math.random()*events.length*1.5/(intelligence*0.002);
-    var randomIcon = Math.floor(Math.random()*events.length);
-    var array = [];
-    if (events.length >= randomNumber) {
-      var eventRandomIconClass = $("<div class=" + events[randomIcon] + "></div>");
-      runEventPosition(array);
-      var arrayLength = array.length * 30 + "px";
-      player.reference.append(eventRandomIconClass);
-      eventRandomIconClass.css("left", arrayLength);
-    };
-  }
-}
-
-function runEventPosition(array) {
-  var randomPosition = Math.floor(Math.random()*24) + 4;
-  for (var i = 0; i<randomPosition; i++) {
-    movement(array);
-  } return array;
-}
