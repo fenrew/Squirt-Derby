@@ -11,18 +11,63 @@
 
 <body>
     <div id="gamebox">
-        <img src="./img/squirt-derby-pic.jpg" alt="" id="loading-screen">
         <div id="gamepad">
-            <div id="player-one-gamepad"><h3>Player 1</h3></div>
-            <div id="player-two-gamepad"><h3>Player 2</h3></div>
-            <div id="player-three-gamepad"><h3>Player 3</h3></div>
-            <div id="player-four-gamepad"><h3>Player 4</h3></div>
+            <div id="player-one-gamepad">
+                <h3>P1: $200</h3>
+                <div id="betting-gamepad-player-one" class="betting-gamepad">
+                    <img src="./img/football.png" alt="" width="60px" height="60px" class="bet-football" id="bet-football-playerOne">
+                    <img src="./img/ThomasTheTankEngine.png" alt="" width="60px" height="60px" class="bet-thomas" id="bet-thomas-playerOne">
+                    <br>
+                    <form action="web-url">
+                        <input type="number" name="Bets" id="playerOne-bet">
+                        <button type="submit">Bet!</button>
+                    </form>
+                </div>
+            </div>
+            <div id="player-two-gamepad">
+                <h3>P2: $200</h3>
+                <div id="betting-gamepad-player-two" class="betting-gamepad">
+                    <img src="./img/football.png" alt="" width="60px" height="60px" class="bet-football" id="bet-football-playerTwo">
+                    <img src="./img/ThomasTheTankEngine.png" alt="" width="60px" height="60px" class="bet-thomas" id="bet-thomas-playerTwo">
+                    <form action="web-url">
+                        <input type="number" name="Bets" id="playerTwo-bet">
+                        <button type="submit">Bet!</button>
+                    </form>
+                </div>
+            </div>
+            <div id="player-three-gamepad">
+                <h3>P3: $200</h3>
+                <div id="betting-gamepad-player-three" class="betting-gamepad">
+                    <img src="./img/football.png" alt="" width="60px" height="60px" class="bet-football" id="bet-football-playerThree">
+                    <img src="./img/ThomasTheTankEngine.png" alt="" width="60px" height="60px" class="bet-thomas" id="bet-thomas-playerThree">
+                    <form action="web-url">
+                        <input type="number" name="Bets" id="playerThree-bet">
+                        <button type="submit">Bet!</button>
+                    </form>
+                </div>
+            </div>
+            <div id="player-four-gamepad">
+                <h3>P4: $200</h3>
+                <div id="betting-gamepad-player-four" class="betting-gamepad">
+                    <img src="./img/football.png" alt="" width="60px" height="60px" class="bet-football" id="bet-football-playerFour">
+                    <img src="./img/ThomasTheTankEngine.png" alt="" width="60px" height="60px" class="bet-thomas" id="bet-thomas-playerFour">
+                    <form action="web-url">
+                        <input type="number" name="Bets" id="playerFour-bet">
+                        <button type="submit">Bet!</button>
+                    </form>
+                </div>
+            </div>
         </div>
         <div id="gamearea">
+            <img src="./img/squirt-derby-pic.jpg" alt="" id="loading-screen">
             <div id="option">
                 <h1>Squirt Derby!</h1>
                 <h2 id="new-game">New Game</h2>
                 <h2 id="credits">Credits</h2>
+            </div>
+            <div id="character-selection">
+                <div id="football-selection"></div>
+                <div id="thomas-selection"></div>
             </div>
             <div id="shop-layout">
                 <div id="race-btn"></div>
@@ -45,6 +90,13 @@
             <div id="upcoming-winner-of-race"></div>
         </div>
     </div>
+    <audio id="thomas-audio">
+        <source src="./audio/Thomas-Opening.mp3" type="">
+    </audio>
+    <audio id="thomas-audio-speed">
+        <source src="./audio/Thomas-Trimmed.mp3" type="">
+    </audio>
+
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
     <script src="Blueprints.js"></script>

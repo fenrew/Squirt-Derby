@@ -55,9 +55,127 @@
 
 h3 {
     font-size: 40px;
-    text-align: center;
     color: rgb(0, 0, 0);
     padding-top: 10px;
+}
+
+.betting-gamepad {
+}
+
+#betting-gamepad-player-one  img{
+    margin: 20px 0px 0px 20px;
+    border: 3px solid transparent;
+}
+
+#betting-gamepad-player-two  img{
+    margin: 20px 0px 0px 20px;
+    border: 3px solid transparent;
+}
+
+#betting-gamepad-player-three  img{
+    margin: 20px 0px 0px 20px;
+    border: 3px solid transparent;
+}
+
+#betting-gamepad-player-four  img{
+    margin: 20px 0px 0px 20px;
+    border: 3px solid transparent;
+}
+
+#bet-football-playerOne:hover {
+    border: 3px solid red;
+}
+
+#bet-thomas-playerOne:hover {
+    border: 3px solid red;
+}
+
+#bet-football-playerTwo:hover {
+    border: 3px solid red;
+}
+
+#bet-thomas-playerTwo:hover {
+    border: 3px solid red;
+}
+
+#bet-football-playerThree:hover {
+    border: 3px solid red;
+}
+
+#bet-thomas-playerThree:hover {
+    border: 3px solid red;
+}
+
+#bet-football-playerFour:hover {
+    border: 3px solid red;
+}
+
+#bet-thomas-playerFour:hover {
+    border: 3px solid red;
+}
+
+#betting-gamepad-player-one input {
+    margin: 10px 0px 0px 40px;
+    width: 250px;
+    font-size: 20px;
+}
+
+#betting-gamepad-player-one button {
+    width: 50px;
+    height: 30px;
+    padding: 2px 0px 0px 0px;
+    font-size: 20px;
+    background-color: brown;
+    border-color: rgb(144, 51, 51);
+    border-radius: 3%;
+}
+
+#betting-gamepad-player-two input {
+    margin: 10px 0px 0px 40px;
+    width: 250px;
+    font-size: 20px;
+}
+
+#betting-gamepad-player-two button {
+    width: 50px;
+    height: 30px;
+    padding: 2px 0px 0px 0px;
+    font-size: 20px;
+    background-color: brown;
+    border-color: rgb(144, 51, 51);
+    border-radius: 3%;
+}
+
+#betting-gamepad-player-three input {
+    margin: 10px 0px 0px 40px;
+    width: 250px;
+    font-size: 20px;
+}
+
+#betting-gamepad-player-three button {
+    width: 50px;
+    height: 30px;
+    padding: 2px 0px 0px 0px;
+    font-size: 20px;
+    background-color: brown;
+    border-color: rgb(144, 51, 51);
+    border-radius: 3%;
+}
+
+#betting-gamepad-player-four input {
+    margin: 10px 0px 0px 40px;
+    width: 250px;
+    font-size: 20px;
+}
+
+#betting-gamepad-player-four button {
+    width: 50px;
+    height: 30px;
+    padding: 2px 0px 0px 0px;
+    font-size: 20px;
+    background-color: brown;
+    border-color: rgb(144, 51, 51);
+    border-radius: 3%;
 }
 
 
@@ -67,6 +185,7 @@ h3 {
     width: 1100px;
     height: 800px;
     background-color: black;
+    position: relative;
 }
 
 #option {
@@ -109,7 +228,14 @@ h2:hover {
 
 .football-img {
     position: absolute;
-    top: 210px;
+    top: 130px;
+}
+
+.thomas-img {
+    position: absolute;
+    top: 107px;
+    width: 130px;
+    height: 90px;
 }
 
 #playerOne {
@@ -118,11 +244,18 @@ h2:hover {
    /* width: 100px; */
 }
 
+#playerTwo {
+    position: relative;
+    height: 190px;
+    margin-top: 12px;
+   /* width: 100px; */
+}
+
 #countdown {
     font-size: 200px;
-    position: fixed;
-    top: 350px;
-    left: 700px;
+    position: absolute;
+    top: 280px;
+    left: 550px;
     color: rgb(243, 228, 25);
     background-color: rgba(187, 0, 0, 0.801);
     padding: 30px 40px 0 40px;
@@ -135,11 +268,11 @@ h4 {
     font-size: 150px;
     text-align: center;
     width: 1000px;
-    position: fixed;
-    top: 320px;
+    position: absolute;
+    top: 240px;
     color: rgb(0, 0, 0);
     border: 10px dotted rgb(255, 208, 0);
-    left: 110px;
+    left: 35px;
     background-color: rgba(255, 254, 254, 0.746);
 }
 
@@ -149,8 +282,47 @@ h4 {
 }
 
 h4:hover {
-    border: 10px solid red;
+    border: 10px solid rgb(255, 208, 0);
     cursor: pointer;
+}
+
+/* Character Selection*/
+
+#character-selection {
+    background-image: url("./img/Background-character-selection.jpeg");
+    background-size: 100% 100%;
+    width: 1100px;
+    height: 800px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#football-selection {
+    background-image: url("./img/football.png");
+    background-size: 100% 100%;
+    height: 300px;
+    width: 300px;
+    margin: 50px 100px;
+    border: 5px solid transparent;
+}
+
+#football-selection:hover {
+    border: 5px solid red;
+    margin: 47.5px 100px;
+}
+
+#thomas-selection {
+    background-image: url("./img/ThomasTheTankEngine.png");
+    background-size: 100% 100%;
+    height: 300px;
+    width: 300px;
+    margin: 50px 100px;
+    border: 5px solid transparent;
+}
+#thomas-selection:hover {
+    border: 5px solid red;
+    margin: 47.5px 100px;
 }
 
 /* SHOP: HERE: PUT THE SIMS LOBBY MUSIC!!!! */
@@ -322,6 +494,11 @@ h5 {
     border: 3px solid white;
 }
 
+#talking-bubble-alley:hover {
+    border: 3px solid red;
+    cursor: pointer;
+}
+
 #shady-guy {
     background-image: url("./img/Shady-person.png");
     background-size: 100% 100%;
@@ -361,7 +538,7 @@ h5 {
     height: 50px;
     width: 50px;
     position: absolute;
-    top: 220px;
+    top: 140px;
 }
 
 .poop-icon {
@@ -371,5 +548,5 @@ h5 {
     height: 50px;
     width: 50px;
     position: absolute;
-    top: 222px;
+    top: 142px;
 }
