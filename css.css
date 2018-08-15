@@ -90,11 +90,27 @@ h3 {
     border: 3px solid red;
 }
 
+#bet-dude-playerOne:hover {
+    border: 3px solid red;
+}
+
+#bet-hotdog-playerOne:hover {
+    border: 3px solid red;
+}
+
 #bet-football-playerTwo:hover {
     border: 3px solid red;
 }
 
 #bet-thomas-playerTwo:hover {
+    border: 3px solid red;
+}
+
+#bet-dude-playerTwo:hover {
+    border: 3px solid red;
+}
+
+#bet-hotdog-playerTwo:hover {
     border: 3px solid red;
 }
 
@@ -106,11 +122,27 @@ h3 {
     border: 3px solid red;
 }
 
+#bet-dude-playerThree:hover {
+    border: 3px solid red;
+}
+
+#bet-hotdog-playerThree:hover {
+    border: 3px solid red;
+}
+
 #bet-football-playerFour:hover {
     border: 3px solid red;
 }
 
 #bet-thomas-playerFour:hover {
+    border: 3px solid red;
+}
+
+#bet-dude-playerFour:hover {
+    border: 3px solid red;
+}
+
+#bet-hotdog-playerFour:hover {
     border: 3px solid red;
 }
 
@@ -178,6 +210,33 @@ h3 {
     border-radius: 3%;
 }
 
+/* Gamepad UpgradeRoom */
+
+.upgrade-speed {
+    margin: 20px;
+}
+.upgrade-intelligence {
+    margin: 20px;
+}
+
+/* Gamepad Attack The Run */
+
+#attack-thomas-playerOne {
+    border: 3px solid red;
+}
+
+#attack-football-playerTwo {
+    border: 3px solid red;
+}
+
+#attack-football-playerThree {
+    border: 3px solid red;
+}
+
+#attack-football-playerFour {
+    border: 3px solid red;
+}
+
 
 /* Game area */
 
@@ -238,6 +297,20 @@ h2:hover {
     height: 90px;
 }
 
+.dude-img {
+    position: absolute;
+    top: 112px;
+    width: 100px;
+    height: 100px;
+}
+
+.hotdog-img {
+    position: absolute;
+    top: 145px;
+    width: 80px;
+    height: 60px;
+}
+
 #playerOne {
     position: relative;
     height: 190px;
@@ -245,6 +318,19 @@ h2:hover {
 }
 
 #playerTwo {
+    position: relative;
+    height: 190px;
+    margin-top: 12px;
+   /* width: 100px; */
+}
+
+#playerThree {
+    position: relative;
+    height: 190px;
+   /* width: 100px; */
+}
+
+#playerFour {
     position: relative;
     height: 190px;
     margin-top: 12px;
@@ -296,6 +382,7 @@ h4:hover {
     position: relative;
     display: flex;
     justify-content: center;
+    flex-flow: wrap;
 }
 
 #football-selection {
@@ -320,10 +407,40 @@ h4:hover {
     margin: 50px 100px;
     border: 5px solid transparent;
 }
+
 #thomas-selection:hover {
     border: 5px solid red;
     margin: 47.5px 100px;
 }
+
+#dude-selection {
+    background-image: url("./img/Dude-p3.png");
+    background-size: 100% 100%;
+    height: 300px;
+    width: 300px;
+    margin: 50px 100px;
+    border: 5px solid transparent;
+}
+
+#dude-selection:hover {
+    border: 5px solid red;
+    margin: 47.5px 100px;
+}
+
+#hotdog-selection {
+    background-image: url("./img/Hotdog-p4.jpg");
+    background-size: 100% 100%;
+    height: 300px;
+    width: 300px;
+    margin: 50px 100px;
+    border: 5px solid transparent;
+}
+
+#hotdog-selection:hover {
+    border: 5px solid red;
+    margin: 47.5px 100px;
+}
+
 
 /* SHOP: HERE: PUT THE SIMS LOBBY MUSIC!!!! */
 
@@ -549,4 +666,14 @@ h5 {
     width: 50px;
     position: absolute;
     top: 142px;
+}
+
+.explosion-icon {
+    background-image: url("./img/Burn-gif.gif");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 90px;
+    width: 80px;
+    position: absolute;
+    top: 102px;
 }

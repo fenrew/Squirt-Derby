@@ -14,14 +14,25 @@
         <div id="gamepad">
             <div id="player-one-gamepad">
                 <h3>P1: $200</h3>
+                <!--Betting-Room-->
                 <div id="betting-gamepad-player-one" class="betting-gamepad">
                     <img src="./img/football.png" alt="" width="60px" height="60px" class="bet-football" id="bet-football-playerOne">
                     <img src="./img/ThomasTheTankEngine.png" alt="" width="60px" height="60px" class="bet-thomas" id="bet-thomas-playerOne">
+                    <img src="./img/Dude-p3.png" alt="" width="60px" height="60px" class="bet-dude" id="bet-dude-playerOne">
+                    <img src="./img/Hotdog-p4.jpg" alt="" width="60px" height="60px" class="bet-hotdog" id="bet-hotdog-playerOne">
                     <br>
-                    <form action="web-url">
-                        <input type="number" name="Bets" id="playerOne-bet">
-                        <button type="submit">Bet!</button>
-                    </form>
+                    <input type="number" name="Bets" id="playerOne-bet-input">
+                </div>
+                <!--Upgrade-Room-->
+                <div id="upgrade-gamepad-player-one">
+                    <img src="./img/button_speed.png" alt="" class="upgrade-speed" id="upgrade-speed-playerOne">
+                    <img src="./img/button_intelligence.png" alt="" class="upgrade-intelligence" id="upgrade-intelligence-playerOne">
+                </div>
+                <!--The Run Room-->
+                <div id="attack-gamepad-player-one">
+                    <img src="./img/ThomasTheTankEngine.png" alt="" width="60px" height="60px" class="bet-thomas" id="attack-thomas-playerOne">
+                    <img src="./img/Dude-p3.png" alt="" width="60px" height="60px" class="bet-dude" id="attack-dude-playerOne">
+                    <img src="./img/Hotdog-p4.jpg" alt="" width="60px" height="60px" class="bet-hotdog" id="attack-hotdog-playerOne">
                 </div>
             </div>
             <div id="player-two-gamepad">
@@ -29,21 +40,42 @@
                 <div id="betting-gamepad-player-two" class="betting-gamepad">
                     <img src="./img/football.png" alt="" width="60px" height="60px" class="bet-football" id="bet-football-playerTwo">
                     <img src="./img/ThomasTheTankEngine.png" alt="" width="60px" height="60px" class="bet-thomas" id="bet-thomas-playerTwo">
-                    <form action="web-url">
-                        <input type="number" name="Bets" id="playerTwo-bet">
-                        <button type="submit">Bet!</button>
-                    </form>
+                    <img src="./img/Dude-p3.png" alt="" width="60px" height="60px" class="bet-dude" id="bet-dude-playerTwo">
+                    <img src="./img/Hotdog-p4.jpg" alt="" width="60px" height="60px" class="bet-hotdog" id="bet-hotdog-playerTwo">
+                    <input type="number" name="Bets" id="playerTwo-bet-input">
                 </div>
+                <!--Upgrade-Room-->
+                <div id="upgrade-gamepad-player-two">
+                    <img src="./img/button_speed.png" alt="" class="upgrade-speed" id="upgrade-speed-playerTwo">
+                    <img src="./img/button_intelligence.png" alt="" class="upgrade-intelligence" id="upgrade-intelligence-playerTwo">
+                </div>
+                <!--The Run Room-->
+                <div id="attack-gamepad-player-two">
+                    <img src="./img/football.png" alt="" width="60px" height="60px" class="bet-football" id="attack-football-playerTwo">
+                    <img src="./img/Dude-p3.png" alt="" width="60px" height="60px" class="bet-dude" id="attack-dude-playerTwo">
+                    <img src="./img/Hotdog-p4.jpg" alt="" width="60px" height="60px" class="bet-hotdog" id="attack-hotdog-playerTwo">
+                </div>
+
             </div>
             <div id="player-three-gamepad">
                 <h3>P3: $200</h3>
                 <div id="betting-gamepad-player-three" class="betting-gamepad">
                     <img src="./img/football.png" alt="" width="60px" height="60px" class="bet-football" id="bet-football-playerThree">
                     <img src="./img/ThomasTheTankEngine.png" alt="" width="60px" height="60px" class="bet-thomas" id="bet-thomas-playerThree">
-                    <form action="web-url">
-                        <input type="number" name="Bets" id="playerThree-bet">
-                        <button type="submit">Bet!</button>
-                    </form>
+                    <img src="./img/Dude-p3.png" alt="" width="60px" height="60px" class="bet-dude" id="bet-dude-playerThree">
+                    <img src="./img/Hotdog-p4.jpg" alt="" width="60px" height="60px" class="bet-hotdog" id="bet-hotdog-playerThree">
+                    <input type="number" name="Bets" id="playerThree-bet-input">
+                </div>
+                <!--Upgrade-Room-->
+                <div id="upgrade-gamepad-player-three">
+                    <img src="./img/button_speed.png" alt="" class="upgrade-speed" id="upgrade-speed-playerThree">
+                    <img src="./img/button_intelligence.png" alt="" class="upgrade-intelligence" id="upgrade-intelligence-playerThree">
+                </div>
+                <!--The Run Room-->
+                <div id="attack-gamepad-player-three">
+                    <img src="./img/football.png" alt="" width="60px" height="60px" class="bet-football" id="attack-football-playerThree">
+                    <img src="./img/ThomasTheTankEngine.png" alt="" width="60px" height="60px" class="bet-thomas" id="attack-thomas-playerThree">
+                    <img src="./img/Hotdog-p4.jpg" alt="" width="60px" height="60px" class="bet-hotdog" id="attack-hotdog-playerThree">
                 </div>
             </div>
             <div id="player-four-gamepad">
@@ -51,13 +83,24 @@
                 <div id="betting-gamepad-player-four" class="betting-gamepad">
                     <img src="./img/football.png" alt="" width="60px" height="60px" class="bet-football" id="bet-football-playerFour">
                     <img src="./img/ThomasTheTankEngine.png" alt="" width="60px" height="60px" class="bet-thomas" id="bet-thomas-playerFour">
-                    <form action="web-url">
-                        <input type="number" name="Bets" id="playerFour-bet">
-                        <button type="submit">Bet!</button>
-                    </form>
+                    <img src="./img/Dude-p3.png" alt="" width="60px" height="60px" class="bet-dude" id="bet-dude-playerFour">
+                    <img src="./img/Hotdog-p4.jpg" alt="" width="60px" height="60px" class="bet-hotdog" id="bet-hotdog-playerFour">
+                    <input type="number" name="Bets" id="playerFour-bet-input">
+                </div>
+                <!--Upgrade-Room-->
+                <div id="upgrade-gamepad-player-four">
+                    <img src="./img/button_speed.png" alt="" class="upgrade-speed" id="upgrade-speed-playerFour">
+                    <img src="./img/button_intelligence.png" alt="" class="upgrade-intelligence" id="upgrade-intelligence-playerFour">
+                </div>
+                <!--The Run Room-->
+                <div id="attack-gamepad-player-four">
+                    <img src="./img/football.png" alt="" width="60px" height="60px" class="bet-football" id="attack-football-playerFour">
+                    <img src="./img/ThomasTheTankEngine.png" alt="" width="60px" height="60px" class="bet-thomas" id="attack-thomas-playerFour">
+                    <img src="./img/Dude-p3.png" alt="" width="60px" height="60px" class="bet-dude" id="attack-dude-playerFour">
                 </div>
             </div>
         </div>
+        <!--Game Area-->
         <div id="gamearea">
             <img src="./img/squirt-derby-pic.jpg" alt="" id="loading-screen">
             <div id="option">
@@ -68,6 +111,8 @@
             <div id="character-selection">
                 <div id="football-selection"></div>
                 <div id="thomas-selection"></div>
+                <div id="dude-selection"></div>
+                <div id="hotdog-selection"></div>
             </div>
             <div id="shop-layout">
                 <div id="race-btn"></div>
@@ -100,6 +145,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
     <script src="Blueprints.js"></script>
+    <script src="gamepad.js"></script>
 </body>
 
 
