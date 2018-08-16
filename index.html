@@ -34,6 +34,8 @@
                     <img src="./img/Dude-p3.png" alt="" width="60px" height="60px" class="bet-dude" id="attack-dude-playerOne">
                     <img src="./img/Hotdog-p4.jpg" alt="" width="60px" height="60px" class="bet-hotdog" id="attack-hotdog-playerOne">
                 </div>
+                <!--The Shop-->
+                <div class="buy-douchbag-btn" id="buy-douche-playerOne"></div>
             </div>
             <div id="player-two-gamepad">
                 <h3>P2: $200</h3>
@@ -55,7 +57,8 @@
                     <img src="./img/Dude-p3.png" alt="" width="60px" height="60px" class="bet-dude" id="attack-dude-playerTwo">
                     <img src="./img/Hotdog-p4.jpg" alt="" width="60px" height="60px" class="bet-hotdog" id="attack-hotdog-playerTwo">
                 </div>
-
+                <!--The Shop-->
+                <div class="buy-douchbag-btn" id="buy-douche-playerTwo"></div>
             </div>
             <div id="player-three-gamepad">
                 <h3>P3: $200</h3>
@@ -77,6 +80,8 @@
                     <img src="./img/ThomasTheTankEngine.png" alt="" width="60px" height="60px" class="bet-thomas" id="attack-thomas-playerThree">
                     <img src="./img/Hotdog-p4.jpg" alt="" width="60px" height="60px" class="bet-hotdog" id="attack-hotdog-playerThree">
                 </div>
+                <!--The Shop-->
+                <div class="buy-douchbag-btn" id="buy-douche-playerThree"></div>
             </div>
             <div id="player-four-gamepad">
                 <h3>P4: $200</h3>
@@ -98,6 +103,8 @@
                     <img src="./img/ThomasTheTankEngine.png" alt="" width="60px" height="60px" class="bet-thomas" id="attack-thomas-playerFour">
                     <img src="./img/Dude-p3.png" alt="" width="60px" height="60px" class="bet-dude" id="attack-dude-playerFour">
                 </div>
+                <!--The Shop-->
+                <div class="buy-douchbag-btn" id="buy-douche-playerFour"></div>
             </div>
         </div>
         <!--Game Area-->
@@ -141,13 +148,28 @@
     <audio id="thomas-audio-speed">
         <source src="./audio/Thomas-Trimmed.mp3" type="">
     </audio>
+<audio id="sims-audio">
+        <source src="./audio/The-sims-buy-mode.mp3" type="">
+</audio>
+<audio id="danktrain-audio">
+        <source src="./audio/Biggie Smalls feat. Thomas the Tank Engine.mp3" type="">
+</audio>
+<audio id="explosion-audio">
+        <source src="./audio/Explosion.mp3" type="">
+</audio>
+<audio id="option-sound">
+    <source src="./audio/Option-sound.wav" type="">
+</audio>
+<audio id="pick-character-hover">
+    <source src="./audio/Pick-character-hover.mp3" type="">
+</audio>
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
-    <script src="Blueprints.js"></script>
+    <script src="thegame.js"></script>
+    <script src="playerconstructor.js"></script>
+    <script src="gameconstructor.js"></script>
     <script src="gamepad.js"></script>
 </body>
-
-
-
 </html>
