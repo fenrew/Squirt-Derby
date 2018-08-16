@@ -5,7 +5,7 @@ function shopDisplay() {
       .show()
       .css("opacity", "1");
     $("#sims-audio")[0].load();
-  //   $("#sims-audio")[0].play();
+    $("#sims-audio")[0].play();
   
     $("#race-btn").mouseenter(function() {
       $("#pick-character-hover")[0].play();
@@ -121,7 +121,7 @@ function shopDisplay() {
   
   function countdownToStart() {
     $("#danktrain-audio")[0].load();
-  //   $("#danktrain-audio")[0].play();
+    $("#danktrain-audio")[0].play();
     var countdownCounter = 2;
     if (!$("#countdown").length) {
       // TODO probably better to find the real cause
