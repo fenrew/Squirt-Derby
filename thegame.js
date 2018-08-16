@@ -104,10 +104,10 @@ function shopDisplay() {
     $(".buy-douchbag-btn").hide();
     $("#sims-audio")[0].pause();
     gamearea.addClass("gamearea-img");
-    $("#attack-gamepad-player-one").show();
-    $("#attack-gamepad-player-two").show();
-    $("#attack-gamepad-player-three").show();
-    $("#attack-gamepad-player-four").show();
+    // $("#attack-gamepad-player-one").show();
+    // $("#attack-gamepad-player-two").show();
+    // $("#attack-gamepad-player-three").show();
+    // $("#attack-gamepad-player-four").show();
     playersSetUp();
   }
   
@@ -161,7 +161,7 @@ function shopDisplay() {
   function theRunFinished(winner) {
     $("#upcoming-winner-of-race").show();
     $("#upcoming-winner-of-race").append(
-      "<h4 class='winner-of-race'>Congratulation " + winner.name + "!!</h4>"
+      "<h4 class='winner-of-race'>Congratulations " + winner.name + "!!</h4>"
     );
   }
   

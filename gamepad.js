@@ -5,6 +5,7 @@ $(window).on("keydown", function(evt) {
       playerOne.specialPowerCounter -= 1;
       if (playerOne.specialPowerCounter > -1) {
         playerOne.specialPower();
+        console.log("UsedSpecialPower")
       }
       break;
     //r

@@ -138,7 +138,7 @@ function characterSelection() {
   var characterCounter = 0;
   $("#hotdog-selection").click(function() {
     playerFour = new Runner(
-      "Hotdog",
+      "Tormod",
       game,
       124,
       6,
@@ -158,7 +158,7 @@ function characterSelection() {
 
   $("#dude-selection").click(function() {
     playerThree = new Runner(
-      "Dude",
+      "Haakon",
       game,
       115,
       9,
@@ -178,7 +178,7 @@ function characterSelection() {
 
   $("#thomas-selection").click(function() {
     playerTwo = new Runner(
-      "Thomas",
+      "Markus",
       game,
       133,
       1,
@@ -197,7 +197,7 @@ function characterSelection() {
   });
   $("#football-selection").click(function() {
     playerOne = new Runner(
-      "Football",
+      "Maxence",
       game,
       127,
       4,
@@ -291,7 +291,7 @@ function bettingButtons() {
   });
 
   $("#bet-dude-playerFour").click(function() {
-    playerFour.placeBet(player131Three);
+    playerFour.placeBet(playerThree);
   });
 
   $("#bet-hotdog-playerFour").click(function() {

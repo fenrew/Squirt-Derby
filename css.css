@@ -287,7 +287,9 @@ h2:hover {
 
 .football-img {
     position: absolute;
-    top: 130px;
+    height: 140px;
+    width: 140px;
+    top: 60px;
 }
 
 .thomas-img {
@@ -299,16 +301,16 @@ h2:hover {
 
 .dude-img {
     position: absolute;
-    top: 112px;
-    width: 100px;
-    height: 100px;
+    top: 82px;
+    width: 140px;
+    height: 140px;
 }
 
 .hotdog-img {
     position: absolute;
-    top: 145px;
-    width: 80px;
-    height: 60px;
+    top: 125px;
+    width: 120px;
+    height: 90px;
 }
 
 #playerOne {
@@ -386,12 +388,13 @@ h4:hover {
 }
 
 #football-selection {
-    background-image: url("./img/football.png");
+    background-image: url("./img/Maxence-img.png");
     background-size: 100% 100%;
     height: 300px;
     width: 300px;
     margin: 50px 100px;
     border: 5px solid transparent;
+    background-color: white;
 }
 
 #football-selection:hover {
@@ -400,12 +403,13 @@ h4:hover {
 }
 
 #thomas-selection {
-    background-image: url("./img/ThomasTheTankEngine.png");
+    background-image: url("./img/Markus-img.png");
     background-size: 100% 100%;
     height: 300px;
     width: 300px;
     margin: 50px 100px;
     border: 5px solid transparent;
+    background-color: white;
 }
 
 #thomas-selection:hover {
@@ -414,7 +418,7 @@ h4:hover {
 }
 
 #dude-selection {
-    background-image: url("./img/Dude-p3.png");
+    background-image: url(".//img/Føyen-img.png");
     background-size: 100% 100%;
     height: 300px;
     width: 300px;
@@ -428,12 +432,13 @@ h4:hover {
 }
 
 #hotdog-selection {
-    background-image: url("./img/Hotdog-p4.jpg");
+    background-image: url("./img/Tormod-img.gif");
     background-size: 100% 100%;
     height: 300px;
     width: 300px;
     margin: 50px 100px;
     border: 5px solid transparent;
+    background-color: white;
 }
 
 #hotdog-selection:hover {

@@ -37,9 +37,8 @@ var Game = function() {
   this.end = function() {
     var winner = this.finishedPlayers[0];
     winner.cash += 200;
-    $("#" + winner.playerhtml + "-gamepad h3").text(
-      "P" + winner.p + ": $" + winner.cash
-    );
+    winner.score += 1;
+    winner.refreshCash();
     this.cleanUp(winner);
   };
 };

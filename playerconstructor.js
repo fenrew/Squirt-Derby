@@ -14,6 +14,8 @@ var Runner = function(name, game, speed, intelligence, id, playerhtml, p) {
   this.cash = 200;
   this.placedBets = [];
   this.specialPowerCounter = 1;
+  this.affectedBySpecialPower = false;
+  this.score = 0;
 
   this.run = function() {
     this.running = true;
@@ -37,38 +39,38 @@ var Runner = function(name, game, speed, intelligence, id, playerhtml, p) {
 
   this.runnerImage = function() {
     switch (this.name) {
-      case "Football":
+      case "Maxence":
         this.reference = $(
           "<div id='" +
             this.id +
-            "'><img src='./img/football.png' alt='' width='60px' class='football-img'></div>"
+            "'><img src='./img/Maxence-img.png' alt='' width='60px' class='football-img'></div>"
         );
         $("#gamearea").prepend(this.reference);
         this.imgReference = $(".football-img");
         break;
-      case "Thomas":
+      case "Markus":
         this.reference = $(
           "<div id='" +
             this.id +
-            "'><img src='./img/ThomasTheTankEngine.png' alt='' width='60px' class='thomas-img'></div>"
+            "'><img src='./img/Markus-img.png' alt='' width='60px' class='thomas-img'></div>"
         );
         $("#gamearea").prepend(this.reference);
         this.imgReference = $(".thomas-img");
         break;
-      case "Dude":
+      case "Haakon":
         this.reference = $(
           "<div id='" +
             this.id +
-            "'><img src='./img/Dude-p3.png' alt='' width='60px' class='dude-img'></div>"
+            "'><img src='./img/Føyen2.png' alt='' width='60px' class='dude-img'></div>"
         );
         $("#gamearea").prepend(this.reference);
         this.imgReference = $(".dude-img");
         break;
-      case "Hotdog":
+      case "Tormod":
         this.reference = $(
           "<div id='" +
             this.id +
-            "'><img src='./img/Hotdog-p4.jpg' alt='' width='60px' class='hotdog-img'></div>"
+            "'><img src='./img/Tormod-img.gif' alt='' width='60px' class='hotdog-img'></div>"
         );
         $("#gamearea").prepend(this.reference);
         this.imgReference = $(".hotdog-img");
@@ -92,7 +94,9 @@ var Runner = function(name, game, speed, intelligence, id, playerhtml, p) {
       function() {
         clearInterval(this.runInterval);
         this.speed /= 4;
-        if (this.running) this.run();
+        if (this.running && this.affectedBySpecialPower == false) {
+          this.run();
+        }
       }.bind(this),
       1000
     );
@@ -106,7 +110,9 @@ var Runner = function(name, game, speed, intelligence, id, playerhtml, p) {
       function() {
         clearInterval(this.runInterval);
         this.speed *= 3;
-        if (this.running) this.run();
+        if (this.running && this.affectedBySpecialPower == false) {
+          this.run();
+        }
       }.bind(this),
       1000
     );
@@ -168,18 +174,24 @@ var Runner = function(name, game, speed, intelligence, id, playerhtml, p) {
   };
 
   this.specialPower = function() {
-    var randomPlayer = Math.floor(Math.random()*4);
+    var randomPlayer = Math.floor(Math.random() * 4);
     clearInterval(game.players[randomPlayer].runInterval);
     var playerPosition = game.players[randomPlayer].position;
     $("#explosion-audio")[0].play();
-    game.players[randomPlayer].reference.append("<div class='explosion-icon'></div>");
-    game.players[randomPlayer].reference.find(".explosion-icon").css("left", playerPosition);
+    game.players[randomPlayer].reference.append(
+      "<div class='explosion-icon'></div>"
+    );
+    game.players[randomPlayer].reference
+      .find(".explosion-icon")
+      .css("left", playerPosition);
     if (game.players[randomPlayer].position < 1050) {
+      game.players[randomPlayer].affectedBySpecialPower = true;
       setTimeout(function() {
         game.players[randomPlayer].reference.find(".explosion-icon").remove();
         game.players[randomPlayer].position = playerPosition;
         game.players[randomPlayer].run();
-      }.bind(this), 2000);
+        game.players[randomPlayer].affectedBySpecialPower = false;
+      }, 2000);
     }
   };
 
@@ -189,9 +201,7 @@ var Runner = function(name, game, speed, intelligence, id, playerhtml, p) {
     if (this.cash >= 100) {
       this.speed += 8;
       this.cash -= 100;
-      $("#" + this.playerhtml + "-gamepad h3").text(
-        "P" + this.p + ": $" + this.cash
-      );
+      this.refreshCash();
     } else prompt("No sufficient funds!");
   };
 
@@ -200,35 +210,31 @@ var Runner = function(name, game, speed, intelligence, id, playerhtml, p) {
       this.intelligence += 1;
       this.speed += 3;
       this.cash -= 100;
-      $("#" + this.playerhtml + "-gamepad h3").text(
-        "P" + this.p + ": $" + this.cash
-      );
+      this.refreshCash();
     } else prompt("No sufficient funds!");
   };
 
   this.placeBet = function(playerToBetOn) {
     var inputBet = $("#" + this.id + "-bet-input").val();
-    if (inputBet <= this.cash){
+    if (inputBet <= this.cash) {
       this.cash -= inputBet;
-      $("#" + this.playerhtml + "-gamepad h3").text(
-        "P" + this.p + ": $" + this.cash
-      );
+      this.refreshCash();
       this.placedBets.push(playerToBetOn.id);
       this.placedBets.push(inputBet);
     }
-  }
+  };
 
-  this.refreshCash = function(){
+  this.refreshCash = function() {
     $("#" + this.playerhtml + "-gamepad h3").text(
-      "P" + this.p + ": $" + this.cash
+      "P" + this.p + ": $" + this.cash + " Score: " + this.score
     );
-  }
+  };
 
   this.buyDouche = function() {
     if (this.cash >= 50) {
-    this.cash -= 50;
-    this.refreshCash();
-    this.specialPowerCounter += 1;
+      this.cash -= 50;
+      this.refreshCash();
+      this.specialPowerCounter += 1;
     }
-  }
+  };
 };
