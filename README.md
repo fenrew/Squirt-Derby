@@ -12,9 +12,9 @@
 
 <img src="./screenshots/Screenshot from 2020-04-03 11-08-32.png">
 
-<img src="./screenshots/Screenshot from 2020-04-03 11-11-40.png">
-
 <img src="./screenshots/Screenshot from 2020-04-03 11-11-16.png">
+
+<img src="./screenshots/Screenshot from 2020-04-03 11-11-40.png">
 
 <img src="./screenshots/Screenshot from 2020-04-03 11-10-43.png">
 
