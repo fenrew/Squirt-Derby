@@ -16,8 +16,6 @@
 
 <img src="./screenshots/Screenshot from 2020-04-03 11-11-40.png">
 
-<img src="./screenshots/Screenshot from 2020-04-03 11-10-43.png">
-
 <img src="./screenshots/Screenshot from 2020-04-03 11-12-10.png">
 
 <img src="./screenshots/Screenshot from 2020-04-03 11-10-58.png">
